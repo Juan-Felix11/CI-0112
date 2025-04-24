@@ -1,2 +1,2 @@
 # CI-0112
-Repositorio del semestre del grupode proga I
+Este repositorio lo usare para todos los trabajos y proyectos del semestre de el cuso de progra I 
