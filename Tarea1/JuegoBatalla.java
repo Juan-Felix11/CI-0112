@@ -1,12 +1,15 @@
+
+//Se importan las bibliotecas "Scanner" y "Random"
 import java.util.Scanner;
 import java.util.Random;
 
 public class JuegoBatalla {
-    private Robot[] robots;
+    private Robot[] robots; // Se cre el array que contendea a los robots
 
     public void iniciarBatalla() {
         Random random = new Random();
 
+        // La funcionalidad de la batalla
         while (robotsVivos() > 1) {
             int atacante = random.nextInt(robots.length);
             int defensor = random.nextInt(robots.length);
@@ -54,6 +57,7 @@ public class JuegoBatalla {
         Scanner escaner = new Scanner(System.in);
         JuegoBatalla juego = new JuegoBatalla(); // Se crea un objeto del juego
 
+        // Comienza el registro de los robots
         int cantidad;
         do {
             System.out.println("Cuántos robots participarán en la batalla? (2 a 10)");
@@ -63,9 +67,10 @@ public class JuegoBatalla {
                 System.out.println("La cantidad es incorrecta, deber de ser de entre 2 a 10");
             }
 
+            // La cantidad de robot participantes solo puede ser de minimo 2 y másimo 10.
         } while (cantidad < 2 || cantidad > 10);
 
-        juego.robots = new Robot[cantidad]; 
+        juego.robots = new Robot[cantidad];
 
         for (int i = 0; i < cantidad; i++) {
             System.out.println("Registrando robot #" + (i + 1));
@@ -80,6 +85,8 @@ public class JuegoBatalla {
                 if (vida < 50 || vida > 100) {
                     System.out.println("Vida inválida. \n");
                 }
+
+                // Permite que los puntos de vida a registra deben de estar entre 50 y 100.
             } while (vida < 50 || vida > 100);
 
             int ataque;
@@ -89,11 +96,16 @@ public class JuegoBatalla {
                 if (ataque < 10 || ataque > 20) {
                     System.out.println("El poder de ataque no es válido \n");
                 }
+
+                // El ataque debe ser de entre 10 y 20.
             } while (ataque < 10 || ataque > 20);
 
             escaner.nextLine();
             juego.robots[i] = new Robot(nombre, vida, ataque);
         }
+
+        // Luego de haber sido configurados los robots, se comienza una nueva batalla
+        // con dichos robots.
         System.out.println("\n ¡¡¡Comienza la batalla!!!");
         juego.iniciarBatalla();
         juego.mostrarGanador();
