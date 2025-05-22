@@ -1,4 +1,4 @@
-Istrucciones de uso "SImulador de Batalla de Robots"
+Instrucciones de uso "SImulador de Batalla de Robots"
 
 Para iniciar: 
 Cuando se ejecute el programa, va a pedir que se indique la cantidad de robots que participaran en la batalla, esta 
