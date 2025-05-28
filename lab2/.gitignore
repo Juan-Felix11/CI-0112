@@ -1,0 +1,31 @@
+# Archivos compilados
+*.class
+
+# Directorios de compilación
+/bin/
+/build/
+/out/
+
+# NetBeans
+nbproject/private/
+/nbproject/private/
+/dist/
+/nbbuild/
+/nbdist/
+.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Respaldo y empaquetado
+*~
+*.jar
+*.war
+*.ear
